@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <title>Convertitore Km/Mi</title>
+    <style>
+        /* Imposta sfondo gradiente */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+        }
+
+        /* Stile box principale */
+        .converter-box {
+            background: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            text-align: center;
+            animation: fadeIn 1s ease-out;
+            transition: transform 0.2s ease;
+        }
+
+        /* Hover animazione */
+        .converter-box:hover {
+            transform: scale(1.05);
+        }
+
+        /* Titolo */
+        h1 {
+            font-size: 24px;
+            color: #333;
+        }
+
+        /* Stile del form e dei campi */
+        label, select, input {
+            font-size: 18px;
+            margin-top: 10px;
+            color: #555;
+        }
+
+        input[type="number"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #74ebd5;
+            border: none;
+            color: #fff;
+            font-size: 18px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #ACB6E5;
+        }
+
+        /* Animazioni */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="converter-box">
+        <h1>Convertitore Km/Mi</h1>
+        <form method="post" action="logica.php">
+            <label for="valore">Inserisci il valore da convertire:</label><br>
+            <input type="number" name="valore" id="valore" step="0.01" required><br>
+            
+            <label for="operazione">Scegli l'operazione:</label><br>
+            <select name="operazione" id="operazione">
+                <option value="km" align = "center ">Km -> Miglia</option>
+                <option value="mi" align = "center ">Miglia -> Km</option>
+            </select><br>
+            
+            <button type="submit">Calcola</button>
+        </form>
+    </div>
+</body>
+</html>

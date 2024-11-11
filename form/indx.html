@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <title>Esercizio FORM</title>
+    <style>
+        body {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h2>Metti il tuo nome</h2>
+    <form action = 'script.php' method="POST">
+        <label for="username">Username:</label>
+        <input type="text" name="username" id="username" required><br><br>
+
+        <h3>Il tuo stato civile</h3>
+        <input type="radio" id="Congiunto" name="stato_civile" value="Congiunto" required>
+        <label for="Congiunto">Congiunto</label><br>
+        <input type="radio" id="Non_Congiunto" name="stato_civile" value="Non Congiunto">
+        <label for="Non_Congiunto">Non Congiunto</label><br><br>
+
+        <h3>Quali argomenti ti interessano?</h3>
+        <input type="checkbox" id="tecnologia" name="interessi[]" value="Tecnologia">
+        <label for="tecnologia">Tecnologia</label><br>
+        <input type="checkbox" id="motori" name="interessi[]" value="Motori">
+        <label for="motori">Motori</label><br>
+        <input type="checkbox" id="viaggi" name="interessi[]" value="Viaggi">
+        <label for="viaggi">Viaggi</label><br><br>
+
+        <h3>Come ci hai conosciuti?</h3>
+<select name = 'conoscenza' >
+        <option value="Giornali"> giornali </option>
+       
+        <option value="TV"> TV </option>
+     
+        <option value="Internet">Internt </option>
+       
+        <option value="Amici">Amici </option>
+      
+    </select><br><br>
+        <input type="submit" style="width:200px;" value="Invia" name="invia">
+    </form>
+</body>
+</html>
