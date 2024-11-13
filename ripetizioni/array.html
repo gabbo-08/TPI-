@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Array in PHP</title>
+   
+    <style>
+        /* Stili comuni per i tre file HTML */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f8ff;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+h1, h2 {
+    color: #004080;
+}
+
+p {
+    margin: 15px 0;
+    line-height: 1.6;
+}
+
+pre {
+    background-color: #e8f5e9;
+    padding: 10px;
+    border-radius: 5px;
+    color: forestgreen;
+    font-size: 16px;
+    text-align: left;
+    overflow-x: auto;
+}
+
+.commit {
+    color: red;
+    font-weight: bold;
+}
+
+/* Stili per il modulo nell'index.html */
+form {
+    margin-top: 20px;
+}
+
+select {
+    width: 220px;
+    padding: 5px;
+    border: 1px solid #004080;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    background-color: #004080;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+input[type="submit"]:hover {
+    background-color: #0066cc;
+}
+.codice { 
+    font-size:80px;
+}
+
+    </style>
+  
+</head>
+
+<body>
+    <h1>Guida sugli Array in PHP</h1>
+    <p>Gli array in PHP sono strutture dati che consentono di memorizzare più valori in un'unica variabile. Possono essere indicizzati numericamente o associativi.</p>
+    <p>Esempio di un array indicizzato:</p>
+    <pre>
+$numeri = array(1, 2, 3, 4, 5);
+echo $numeri[0]; // Stampa 1
+    </pre>
+    <p>Esempio di un array associativo:</p>
+    <pre>
+
+
+$persona = array(
+    "nome" => "Mario", 
+    "età" => 30);
+    echo $persona['nome'];       // Stampa "Mario"
+
+
+
+    </pre>
+    <p>La funzione <code class = 'codie '> extract()</code> consente di creare variabili a partire dalle chiavi di un array associativo. Questo può essere utile per rendere dinamico il codice, permettendo agli utenti di modificare i valori di variabili come il nome o l'età attraverso l'input in una pagina web.</p>
+    <pre>
+        $a = "IPPOGRIFO";
+        $animali = array(
+            "animale_1" => "gatto",
+            "animale_2" => "cane", 
+            "animale_3" => "cavallo"
+        );
+        <pre class = 'commit'>// Estrai le chiavi come variabili</pre>
+        extract($animali);
+        <pre class = 'commit'>// Modifica la variabile estratta</pre>
+     $animale_1 = $a;
+       
+     echo $animale_1; <pre class = 'commit'> // stampa: IPPOGRIFO</pre>
+
+
+    </pre>
+    <p>Nel codice sopra, la funzione <code>extract()</code> crea variabili con i nomi delle chiavi dell'array <code>$animali</code>
+    <P>Questo significa che il valore di <code>$a</code> viene sovrascritto e diventa "IPPOGRIFO"</P>
+    </pre>
+</body>
+</html>
