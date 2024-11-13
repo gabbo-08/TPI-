@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <style>
+    /* Stili comuni per i tre file HTML */
+    body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f8ff;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+    display: flex;
+    flex-direction: column; /* Assicura che gli elementi si dispongano verticalmente */
+    justify-content: center; /* Centra verticalmente */
+    align-items: center; /* Centra orizzontalmente */
+    min-height: 100vh; /* L'altezza minima è l'intera altezza della finestra */
+}
+
+
+h1, h2 {
+    color: #800200;
+}
+
+p {
+    margin: 15px 0;
+    line-height: 1.6;
+}
+
+pre {
+    background-color: #e8f5e9;
+    padding: 10px;
+    border-radius: 5px;
+    color: forestgreen;
+    font-size: 16px;
+    text-align: left;
+    overflow-x: auto;
+}
+
+.commit {
+    color: red;
+    font-weight: bold;
+}
+
+.option {
+    text-align: center;
+    font-size: 20px;
+}
+
+/* Stili per il modulo nell'index.html */
+form {
+    margin-top: 20px;
+}
+
+select {
+    width: 220px;
+    padding: 5px;
+    border: 1px solid #004080;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    background-color: #004080;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+input[type="submit"]:hover {
+    background-color: #0066cc;
+}
+
+   </style>
+   
+    <title>Ripetizione</title>
+</head>
+<body align = 'center'>
+    
+    <h2>quali argomenti di PHP non hai capito bene?</h2>
+        <form action="script.php" method="post">
+            <select name="argomenti" style="width: 200px;"  class="option">
+                <option value="array">Array</option>
+                <option value="elenco">Elenco</option>
+                <option value="foreach">Foreach</option>
+                <option value="funzioni">Funzioni</option>
+                <option value="POST/GET">POST/GET</option>
+            </select><br><br>
+            
+            <input type="submit" style="width:80px;" value="Invia" name="invia">
+    </form>
+</body>
+</html>

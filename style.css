@@ -1,0 +1,58 @@
+/* Stili comuni per i tre file HTML */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f8ff;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+h1, h2 {
+    color: #004080;
+}
+
+p {
+    margin: 15px 0;
+    line-height: 1.6;
+}
+
+pre {
+    background-color: #e8f5e9;
+    padding: 10px;
+    border-radius: 5px;
+    color: forestgreen;
+    font-size: 16px;
+    text-align: left;
+    overflow-x: auto;
+}
+
+.commit {
+    color: red;
+    font-weight: bold;
+}
+
+/* Stili per il modulo nell'index.html */
+form {
+    margin-top: 20px;
+}
+
+select {
+    width: 220px;
+    padding: 5px;
+    border: 1px solid #004080;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    background-color: #004080;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+input[type="submit"]:hover {
+    background-color: #0066cc;
+}
